@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.btn{
+    margin: 10px;
+outline: 0;
+grid-gap: 8px;
+align-items: center;
+background: 0 0;
+border: 1px solid #000;
+border-radius: 4px;
+cursor: pointer;
+display: inline-flex;
+flex-shrink: 0;
+font-size: 16px;
+gap: 8px;
+justify-content: center;
+line-height: 1.5;
+overflow: hidden;
+padding: 12px 16px;
+text-decoration: none;
+text-overflow: ellipsis;
+transition: all .14s ease-out;
+white-space: nowrap;
+}
+.btn:hover {
+    box-shadow: 4px 4px 0 #000;
+    transform: translate(-4px,-4px);
+    background-color: rgb(57, 238, 238);
+}
+.btn:focus-visible{
+    outline-offset: 1px;
+}
+#study{
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    vertical-align:middle;
+    height: 100%;
+}
+</style>
+<body>
+    <div id="study">
+    <button  class="btn" id="bubble_sort" onclick="BUBBLE_SORT()">BUBBLE SORT</button>
+    <button  class="btn" id="bubble_sort" onclick="STACK()">STACK</button>
+    <button  class="btn" id="bubble_sort" onclick="MATRIX()">MATIX</button>
+    <button  class="btn" id="bubble_sort" onclick="MERGE_SORT()">MERGE SORT</button>
+    <button  class="btn" id="bubble_sort" onclick="ARRAY1()">ARRAY1</button>
+    <button  class="btn" id="bubble_sort" onclick="ARRAY2()">ARRAY2</button>
+    <button  class="btn" id="bubble_sort" onclick="INSERTION_SORT()">INSERTION SORT</button>
+    <button  class="btn" id="bubble_sort" onclick="SELECTION_SORT()">SELECTION SORT</button>
+    <button  class="btn" id="bubble_sort" onclick="LINEAR_SEARCH()">LINEAR SEARCH</button>
+    <button  class="btn" id="bubble_sort" onclick="BINARY_SEARCH()">BINARY SEARCH</button>
+    <button  class="btn" id="bubble_sort" onclick="MIN_HEAP()">MIN HEAP</button>
+    <button  class="btn" id="bubble_sort" onclick="MIX_HEAP()">MIX HEAP</button>
+    <button  class="btn" id="bubble_sort" onclick="ABC()">ABC</button>
+
+
+</div>
+
+
+</body>
+
+
+
+
+
+
+<script>
+
+function BUBBLE_SORT(params) {
+    navigator.clipboard.writeText(` #include<stdio.h>
+
+
+int main(){
+    int i,j,temp,size,arr[100];
+    
+    printf("Enter thre the number of elements : ");
+    scanf("%d",&size);
+    
+    
+    for(i=0;i<size;i++){
+        printf("Enter %d element : ",i+1);
+        scanf("%d",&arr[i]);
+    } 
+    
+    printf("Entered ELEMENTS ARE : \\n\\n");
+    for(i=0;i<size;i++){
+        printf(" elements :  %d\\n",arr[i]);
+    }
+    
+    for(i=0;i<size-1;i++){
+        for(j=0;j<size-1;j++){
+            if(arr[j]>arr[j+1]){
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+    
+    printf("SORTED ELEMENTS ARE : \\n\\n");
+    for(i=0;i±size;i++){
+        printf(" elements :  %d \\n",arr[i]);
+    }
+    `)
+}
+
+
+function STACK(params) {
+    navigator.clipboard.writeText(`#include<stdio.h>
+#include<conio.h>
+#define MAX 30
+int stack[MAX];
+int top =-1; //Stack is empty.
+void push();
+int pop();
+int peek();
+void display();
+int main()
+{
+int choice;
+do
+{
+printf("\\n ** Main Menu ** \\n");
+printf("1.Push\\n");
+printf("2.Pop \\n");
+printf("3.Peek \\n");
+printf("4.Display \\n");
+printf("Enter your choice :");
+scanf("%d",&choice);
+printf("\\n");
+switch(choice)
+{
+case 1: push();
+break;
+case 2 : pop();
+break;
+case 3 : peek();
+break;
+case 4 : display();
+break;
+case 5 : break;
+}
+}
+while(choice!=5);
+return 0;
+}
+void push()
+{
+int val;
+if(top == MAX -1)
+{
+printf("Stack is full.");
+} 
+else
+{
+  printf("Enter the value to be pushed : ");
+  scanf("%d",&val);
+  stack[++top]=val;
+  printf("Successfully pushed.\\n");
+  }
+  }
+  int pop()
+  {
+  if(top == -1)
+  {
+  printf("Stack is already empty.");
+  }
+  else
+  {
+  int val = stack[top];
+  top--;
+  printf("The value is popped : %d",val);
+  }
+  }
+  int peek()
+  {
+  if(top == -1)
+  {
+  printf("Stack is empty.");
+}
+else
+{
+int topmost = stack[top];
+printf("The topmost element of stack : %d ",topmost);
+}
+}
+void display()
+{
+if(top == -1)
+{
+printf("Stack is empty.");
+}
+else
+{
+int i;
+printf("Stack is : ");
+for(i=top;i>=0;i--)
+{
+printf("\\t%d",stack[i]);
+}
+}
+}`)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function ARRAY2(params) {
+    navigator.clipboard.writeText()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function MERGE_SORT(params) {
+    navigator.clipboard.writeText()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function SELECTION_SORT(params) {
+    navigator.clipboard.writeText(`//5B
+#include<stdio.h>
+#include<conio.h>
+#include<malloc.h>
+
+int selection_sort(int n);
+int A[20];
+
+int selection_sort(int n){
+	int imin,i ,j,temp;
+	for(i=0;i<n;i++){
+		imin=i;
+		for(j=i+1;j<n;j++){
+			if(A[imin]>A[j]){
+				imin=j;
+			}
+		}
+		temp=A[i];
+		A[i]=A[imin];
+		A[imin]=temp;
+	}
+	printf("Succesfully Sorted using Select SORT");
+}
+
+int main(){
+	int n,i;
+	printf("Enter the size :");
+	scanf("%d",&n);
+	printf("Enter the element : ");
+	for(i=0;i<n;i++){
+		scanf("%d",&A[i]);
+		printf("\\n");
+		
+	}
+	
+	selection_sort(n);
+	for(i=0;i<n;i++){
+		printf("\\n %d \\n",A[i]);
+	}
+	
+	return 0;
+}`)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function MATRIX(params) {
+    navigator.clipboard.writeText(`
+//PRACTICAL NO.:10 (Implement the following data structure techiniques)
+//Aim 10(A): Write a program to generate adjacency matrix.
+//PROGRAM CODE:
+#include <stdio.h>
+int N, M,i,j;
+void createAdjMatrix(int Adj[][N + 1],int arr[][2])
+{
+	for ( i = 0; i < N + 1; i++)
+ {
+	for ( j = 0; j < N + 1; j++) 
+{
+		Adj[i][j] = 0;
+		}
+	}
+	for ( i = 0; i < M; i++)
+ {
+		int x = arr[i][0];
+		int y = arr[i][1];
+		Adj[x][y] = 1;
+		Adj[y][x] = 1;
+	}
+}
+void printAdjMatrix(int Adj[][N + 1])
+{
+	for ( i = 1; i < N + 1; i++) {
+		for ( j = 1; j < N + 1; j++) 
+{
+		printf("%d ", Adj[i][j]);
+		}
+		printf("\\n");
+	}
+}
+int main()
+{
+	N = 5;
+	int arr[][2]= { { 1, 2 }, { 2, 3 },{ 4, 5 }, { 1, 5 } };
+	M = sizeof(arr) / sizeof(arr[0]);
+	int Adj[N + 1][N + 1];
+	createAdjMatrix(Adj, arr);
+	printAdjMatrix(Adj);
+	return 0;
+}`)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function INSERTION_SORT(params) {
+    navigator.clipboard.writeText()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function ABC(params) {
+    navigator.clipboard.writeText(`#include<stdio.h>
+#include<conio.h>
+int move(int n,char source,char temp,char destination);
+int main()
+{
+int n;
+printf("enter number of Disk");
+scanf("%d",&n);
+
+move(n,'A','B','C');
+getch();
+return 0;
+}
+int move(int n,char source,char temp,char destination)
+{
+if(n == 1)
+{
+printf("\\n Move from %c to %c",source,destination);
+}
+else
+{
+move(n-1,source,destination,temp);
+move(1,source,temp,destination);
+move(n-1,temp,source,destination);
+}
+}`)
+}
+
+
+</script>
+</html>
